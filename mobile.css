@@ -1,0 +1,49 @@
+/* AB Fashion — Hyderabad Collection · phone layout (screens <= 760px).
+   Loaded after the page's styles; overrides are scoped to mobile only. */
+@media (max-width: 760px){
+
+  /* ---- Top bar: compact and wrapping ---- */
+  .topbar{height:auto !important; padding:8px 12px !important; flex-wrap:wrap !important; gap:8px !important;}
+  .topbar h2{font-size:14px !important; line-height:1.2 !important;}
+  .topbar h2 small{font-size:10px !important;}
+  .topbar .who{font-size:12px !important;}
+  .topbar button{padding:7px 11px !important; font-size:12.5px !important;}
+
+  /* ---- Navigation: a scrollable strip across the top instead of a side column ---- */
+  .layout{flex-direction:column !important;}
+  .side{width:100% !important; height:auto !important; min-height:0 !important; position:static !important;
+        border-right:none !important; border-bottom:1px solid var(--line) !important;
+        display:flex !important; flex-direction:row !important; overflow-x:auto !important;
+        padding:6px 6px !important; gap:3px !important; -webkit-overflow-scrolling:touch;}
+  .side a{flex:0 0 auto !important; border-left:none !important; border-bottom:3px solid transparent !important;
+          padding:9px 13px !important; border-radius:8px !important; white-space:nowrap !important; font-size:13px !important;}
+  .side a.active{border-left:none !important; border-bottom-color:var(--pri) !important;}
+  .side a span.lbl, .side a .lbl{display:inline !important;}
+
+  /* ---- Main content: full width, tighter padding ---- */
+  .main{padding:14px 12px !important; max-width:100% !important;}
+  .page-h{gap:8px !important;}
+  .page-h h3{font-size:17px !important;}
+
+  /* ---- KPI cards: one per row (also beats inline 3/4-column grids) ---- */
+  .kpis{grid-template-columns:1fr !important; gap:12px !important;}
+  .kpi .v{font-size:22px !important;}
+
+  /* ---- Forms: single column ---- */
+  .grid4{grid-template-columns:1fr !important;}
+
+  /* ---- Wide tables scroll inside their card instead of breaking the page ---- */
+  .panel{overflow-x:auto !important; -webkit-overflow-scrolling:touch;}
+  .panel table{min-width:520px;}
+
+  /* ---- Filters and week tabs scroll sideways ---- */
+  .filterbar{gap:8px !important;}
+  .seg{overflow-x:auto !important; max-width:100% !important; -webkit-overflow-scrolling:touch;}
+  .seg button{white-space:nowrap !important;}
+  .search{width:100% !important;}
+
+  /* ---- Customer rows & modals ---- */
+  .cust-head{gap:8px !important; padding:11px 12px !important;}
+  .cust-bal{font-size:14px !important;}
+  .modal{width:94vw !important;}
+}
